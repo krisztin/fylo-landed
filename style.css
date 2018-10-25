@@ -115,15 +115,63 @@ button {
   margin: .5rem 0;
 }
 
-footer {
-  text-align: right;
+@media screen and (max-width: 950px) {
+  body {
+    font-size: 16px;
+  }
 }
 
-@media screen and (max-width:800px) {
-  .row {
+@media screen and (max-width: 695px) {
+  .main-wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+  }
+
+  .hero img {
+    max-width: 250px;
+  }
+
+  .hero {
+    width: 100%;
+  }
+
+  .content {
+    width: calc(100% - 4rem);
+    min-width: 100px;
+  }
+
+  .hero {
+    max-height: 350px;
+  }
+
+  nav i {
+    color: #fff;
+    font-size: 1.5rem;
+    padding-left: 1.5rem;
+  }
+
+  nav img {
+    max-height: 1.5rem;
+  }
+
+  button,
+  input {
+    display: block;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  input {
+    width: calc(100% - 2rem);
+  }
+
+  h3,
+  input,
+  button {
+    margin-bottom: 0.5rem;
   }
 }
