@@ -1,6 +1,6 @@
 # Sign up split layout
 
-Just a little practice of:
+Practicing:
 
 - flexbox
 - node-minify and build scripts
