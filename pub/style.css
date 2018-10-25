@@ -1,0 +1,181 @@
+:root {
+  --primary: hsl(243, 86%, 85%);
+  --primary-dark: hsl(243, 87%, 12%);
+  --accent: hsl(163, 95%, 43%);
+  --grey: hsl(0, 0%, 50%);
+}
+
+body {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+  color: var(--primary-dark);
+  font-size: 18px;
+}
+
+h3 {
+  margin-bottom: 0;
+}
+
+p {
+  color: var(--grey);
+}
+
+.main-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.content {
+  min-width: 450px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.hero {
+  height: 100vh;
+  position: relative;
+  min-width: 180px;
+  width: 50%;
+  background: #bdbafa;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, #bdbafa 0%, #110a6d 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bdbafa', endColorstr='#110a6d', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+}
+
+.hero img {
+  min-width: 150px;
+  max-width: 400px;
+  width: 70%;
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+nav {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: 2rem;
+}
+
+nav .icons {
+  float: right;
+}
+
+nav i {
+  font-size: 1.5rem;
+  padding-left: 0.6em;
+}
+
+nav i:hover {
+  color: var(--accent);
+}
+
+nav i:active {
+  color: var(--primary);
+}
+
+nav img {
+  max-height: 2rem;
+}
+
+input {
+  padding: 1rem;
+  border-radius: 5px;
+  border: 1px solid var(--primary);
+}
+
+button {
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 1rem 3rem;
+  margin: 0.5rem 0;
+}
+
+button:hover {
+  background: var(--primary-dark);
+}
+
+button:active {
+  background: var(--primary);
+}
+
+@media screen and (max-width: 950px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 695px) {
+  .main-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .hero img {
+    max-width: 250px;
+  }
+
+  .hero {
+    width: 100%;
+  }
+
+  .content {
+    width: calc(100% - 4rem);
+    min-width: 100px;
+  }
+
+  .hero {
+    max-height: 350px;
+  }
+
+  nav i {
+    color: #fff;
+    font-size: 1.5rem;
+    padding-left: 1.5rem;
+  }
+
+  nav img {
+    max-height: 1.5rem;
+  }
+
+  button,
+  input {
+    display: block;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  input {
+    width: calc(100% - 2rem);
+  }
+
+  h3,
+  input,
+  button {
+    margin-bottom: 0.5rem;
+  }
+}
