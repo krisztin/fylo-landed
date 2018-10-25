@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "min-css": "node-minify --compressor crass --input './pub/style.css' --output 'style.css'",
-    "min-html": "node-minify --compressor html-minifier --input './pub/index.html' --output 'index.html'"
+    "min-css": "node-minify --compressor crass --input 'style.css' --output './dist/style.css'",
+    "min-html": "node-minify --compressor html-minifier --input 'index.html' --output './dist/index.html'",
+    "copy": "cp -R images/ dist/images/",
+    "build": "node-minify --compressor crass --input 'style.css' --output './dist/style.css' && node-minify --compressor html-minifier --input 'index.html' --output './dist/index.html' && copy"
   },
   "author": "",
   "license": "ISC",
